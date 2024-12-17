@@ -1,2 +1,2 @@
-# CardanoPyc
+# CardanoPyC
 A code repository for CardanoPY
