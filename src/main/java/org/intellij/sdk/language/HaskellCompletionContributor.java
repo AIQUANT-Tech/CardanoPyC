@@ -134,10 +134,32 @@ public class HaskellCompletionContributor extends CompletionContributor {
                 "data", "type", "where", "module", "let", "in",
                 "case", "of", "import", "instance", "newtype", "deriving",
                 "if", "then", "else", "do", "as", "qualified", "hiding",
-                "forall", "mdo", "proc", "infix", "infixl", "infixr",
+                "forall", "infix", "infixl", "infixr",
                 "class", "instance", "default", "foreign", "inline", "noinline",
-                "typeclass", "typefamily", "newtype", "let", "in", "if", "then", "else",
-                "submitTx"
+                "typeClass", "typefamily", "let", "in", "if", "then", "else",
+                "submitTx","all","abs","accum","alreadyInUseErrorType","alreadyExistsErrorType","acos",
+                "accumArray","annotateIOError","array","asTypeOf","partition","permissionErrorType","permutations","phase",
+                "pi","polar","posixTimeFromIso8601","print","printDataToJSON","product","program","properFraction",
+                "pure","putChar","putStr","bit","bitSize","bounds","break","calculate","catch","catMaybes","ceiling","clearBit",
+                "compare","complement","concat","concatMap","const","curry","cycle","writePolicyToFile","writeCodeToFile",
+                "toBuiltinData","writeValidatorToFile","unstableMakeIsData","traceIfFalse","unless","untypedValidator",
+                "displayError","from","deadline","getTxId","mkValidator", "txSignedBy","decodeFloat","delete","deleteBy",
+                "deleteFirstBy","digitToInt","div","divMod","doesNotExistErrorType","drop","dropWhile","elemIndex",
+                "encodeFloat","enumFrom","enumFromThen","enumFromTo","eofErrorType","error","exitFailure","exitSuccess","exitWith",
+                "exp","exponent","fail","filterM","find","findIndex","fixIO","flip","floatDigits","floatRadix","floatRange",
+                "floor","foldM","foreign","forM","fromEnum","fromIntegral","fromJust","fromMaybe","fromRat","fromRational",
+                "fullErrorType","genericIndex","genericLength","genericReplicate","genericSplitAt","genericTake","getArgs","getContents",
+                "getEnv","getProgName","guard","groupBy","inRange","insertBy","interact","intersect","intersectBy","intersperse",
+                "intToDigit","ioeGetErrorString","ioeGetFileName","ioeGetHandle","ioError","isAlpha","isAlreadyExistsError",
+                "isAlreadyInUseError","isAscii","isControl","isDigit","isFullError","isHexDigit","isLetter","isLower","isMark",
+                "isNegativeZero","isNothing","isNumber","isOctDigit","isSpace","isUpper","isSymbol","join","last","lcm","length",
+                "lex","lexDigits","letLitChar","lines","list","listArray","log","lookup","magnitude","max","maxBound","maximum",
+                "mkIOError","mkPolar","mod","minimum","min","max","not","numerator","odd","openFile","otherwise","partition",
+                "pi","pkh","plutus","printVestingDatumJSON","product","qualified","range","raedHex","readInt","readIO",
+                "readList","readOct","repeat","readSigned","return","rotate","tail","take","time","toInteger","toEnum","then",
+                "toInteger","try","txInfoValidRange","txSignedBy","union","unionBy","unless","unstableMakeIsData",
+                "unzip","unzip3","unzip4","useError","useErrorType","validator","vesting","void","vestingAddressBech32","validatorAddressBech32",
+                "wrapValidator","writeFile","writeValidatorToFile","xor","zip3","zip4"
         );
         for (String keyword : keywords) {
             resultSet.addElement(LookupElementBuilder.create(keyword));
@@ -166,7 +188,9 @@ public class HaskellCompletionContributor extends CompletionContributor {
                 Pair.of("mapM", "Maps a monadic function over a list."),
                 Pair.of("sequence", "Transforms a list of actions into an action that produces a list."),
                 Pair.of("liftM", "Lifts a function to a monadic context."),
-                Pair.of("join", "Flattens a monadic value.")
+                Pair.of("join", "Flattens a monadic value."),
+                Pair.of("putStrLn","Print"),
+                Pair.of("getLine","Input")
         );
         for (Pair<String, String> function : functions) {
             resultSet.addElement(LookupElementBuilder.create(function.getLeft()).withTypeText(function.getRight()));
@@ -181,7 +205,9 @@ public class HaskellCompletionContributor extends CompletionContributor {
                 "Data.Maybe", "Data.Either", "Control.Applicative",
                 "Data.Functor", "Data.Tuple", "Control.Concurrent",
                 "System.IO", "Data.Text", "Data.Map",
-                "Data.Set", "Control.Monad.Trans", "Control.Monad.State","Ledger.Value"
+                "Data.Set", "Control.Monad.Trans", "Control.Monad.State","Ledger.Value",
+                "Plutus.V2.Ledger.Api","Data.ByteString.Char8",
+                "PlutusTx.Builtins.Internal"
         );
         for (String moduleImport : moduleImports) {
             resultSet.addElement(LookupElementBuilder.create(moduleImport));
@@ -190,11 +216,12 @@ public class HaskellCompletionContributor extends CompletionContributor {
 
     private void addPragmaCompletions(CompletionResultSet resultSet) {
         List<String> pragmas = Arrays.asList(
-                "LANGUAGE ", "OPTIONS_GHC ", "WARNING ", "DEPRECATED ",
-                "INLINE ", "NOINLINE ", "INLINABLE ", "CONLIKE ",
+                "LANGUAGE ", "WARNING ", "DEPRECATED ",
+                "INLINE ", "NOINLINE ", "INLINABLE ",
                 "RULES ", "ANN ", "LINE ", "SPECIALIZE ",
                 "UNPACK ", "SOURCE ", "SCC ",
-                "LANGUAGE GADTs", "LANGUAGE TypeFamilies", "LANGUAGE MultiParamTypeClasses","#-}"
+                "LANGUAGE GADTs", "LANGUAGE TypeFamilies", "LANGUAGE MultiParamTypeClasses","#-}",
+                "Prelude"
         );
         for (String pragma : pragmas) {
             resultSet.addElement(LookupElementBuilder.create(pragma));
@@ -214,8 +241,19 @@ public class HaskellCompletionContributor extends CompletionContributor {
 
     private void addPlutusIdentifierCompletions(CompletionResultSet resultSet) {
         List<String> plutusIdentifiers = Arrays.asList(
-                "Ledger", "PlutusTx", "Contract", "mkValidator", "txSignedBy","BuiltinByteString","Validator",
-                "Redeemer","Datum","TxOutRef","ScriptContext","PubKeyHash","Address","TxInfo"
+                "Ledger", "PlutusTx", "Contract","BuiltinByteString","Validator",
+                "Redeemer","Datum","TxOutRef","ScriptContext","PubKeyHash","Address","TxInfo","FileError",
+                "POSIXTime","Beneficiary","BuiltinByteString","TxOutRef","UTXO","TypeFamilies","ScopedTypeVariables","TypeApplications",
+                "ParagraphSeparator","PrivateUse","AbsoluteSeek","AppendMode","Applicative","Array","Bits","BlockBuffering",
+                "Bounded","BufferMode","BuiltinData","Builtins","Script","Reached","MintingPolicy","BuiltinByteString",
+                "TemplateHaskell", "NoImplicitPrelude","DataKinds","Policy","Signed","TypeFamilies","TypeApplications","ScopedTypeVariables",
+                "MultiParamTypeClasses","ImportQualifiedPost","DeriveAnyClass","DeriveGeneric","ScopedTypeVariables","TypeApplications",
+                "DerivingStrategies","MultiParamTypeClasses","Utils","ByteString","Directory","FilePath","Complex",
+                "ConnectorPunctuation","Complex","CHAIN","Contexts","Data","DataKinds","DecimalNumber","ExitCode","ExitFailure",
+                "ExitSuccess","False","Functor","Format","GT","Handle","HELPER","Int8","Int16","Int32","Int64","Interval",
+                "IOError","Ix","IOMode","Just","Left","LT","LetterNumber","LowercaseLetter","MathSymbol","Nothing","NoImplicitPrelude",
+                "NoBuffering","NotAssigned","ON","Ratio","Real","Right","ScriptContext","TemplateHaskell","ReadWriteMode","Word"
+
         );
         for (String identifier : plutusIdentifiers) {
             resultSet.addElement(LookupElementBuilder.create(identifier));
@@ -224,7 +262,7 @@ public class HaskellCompletionContributor extends CompletionContributor {
 
     private void addTypeClassCompletions(CompletionResultSet resultSet) {
         List<String> typeclasses = Arrays.asList(
-                "Eq", "Ord", "Show", "Functor", "Monad"
+                "Eq", "Ord", "Show", "Functor", "Monad","Semigroup"
         );
         for (String typeclass : typeclasses) {
             resultSet.addElement(LookupElementBuilder.create(typeclass));
@@ -236,8 +274,8 @@ public class HaskellCompletionContributor extends CompletionContributor {
         List<String> types = Arrays.asList(
                 "Int", "Bool", "Char", "String", "Float", "Double",
                 "Maybe", "List", "Tuple", "Either", "IO",
-                "Function", "Map", "Set", "CustomType",
-                "User DefinedType", "Monad", "Functor", "Applicative"
+                "Function", "Map", "Set", "CustomType","DataKinds",
+                "Applicative"," Utils","DeriveGeneric","OverloadedStrings"
         );
         for (String type : types) {
             resultSet.addElement(LookupElementBuilder.create(type));
