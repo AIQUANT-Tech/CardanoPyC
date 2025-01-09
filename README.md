@@ -1,4 +1,7 @@
-# IntelliJ Platform Plugin Template
+# IntelliJ Platform Plugin CardanoPyC
+
+A code repository for CardanoPyC.\
+Scope and Design Document: https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/DesignDocs/CardanoPyC-Scope_Design_Document.pdf
 
 [![official JetBrains project](https://jb.gg/badges/official.svg)][jb:github]
 [![Twitter Follow](https://img.shields.io/badge/follow-%40JBPlatform-1DA1F2?logo=twitter)](https://twitter.com/JBPlatform)
