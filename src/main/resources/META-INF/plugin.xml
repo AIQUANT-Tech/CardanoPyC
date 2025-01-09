@@ -3,7 +3,7 @@
     <name>CardanoPyC</name>
     <vendor>AIQUANT TECHNOLOGIES</vendor>
     <version>1.0.0</version>
-    <depends>com.redhat.devtools.lsp4ij</depends>
+
     <description>CardanoPyC is a powerful IntelliJ-based plugin that provides seamless support for Haskell and Plutus development.
         It is designed to enhance developer productivity by offering:
 
@@ -192,7 +192,6 @@
         <completion.contributor
                 language="Haskell"
                 implementationClass="org.intellij.sdk.language.HaskellCompletionContributor"/>
-        <templateContext implementation="org.intellij.sdk.language.HaskellTemplateContext"/>
     </extensions>
 
 </idea-plugin>
