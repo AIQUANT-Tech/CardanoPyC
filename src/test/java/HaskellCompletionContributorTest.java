@@ -1,4 +1,4 @@
-import com.intellij.testFramework.fixtures.BasePlatformTestCase;
+ import com.intellij.testFramework.fixtures.BasePlatformTestCase;
 import com.intellij.codeInsight.completion.CompletionType;
 import java.util.List;
 
