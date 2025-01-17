@@ -412,6 +412,7 @@ Dependabot is a bot provided by GitHub to check the build configuration files an
 > ```bash
 > ./gradlew wrapper
 > ```
+> chmod +x ./gradlew
 
 ### Changelog maintenance
 
