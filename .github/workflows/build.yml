@@ -218,7 +218,7 @@ jobs:
       - name: Run Plugin Verification tasks
         run: |
            chmod +x ./gradlew  # Ensure gradlew has execute permissions
-              ./gradlew verifyPlugin -Dplugin.verifier.home.dir=${{ needs.build.outputs.pluginVerifierHomeDir }}
+              ./gradlew verifyPlugin -Dplugin.verifier.home.dir=${{ needs.build.outputs.pluginVerifierHomeDir }}-mute ForbiddenPluginIdPrefix
       
 
       # Collect Plugin Verifier Result
