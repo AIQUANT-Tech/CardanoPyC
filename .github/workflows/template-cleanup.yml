@@ -20,6 +20,9 @@ jobs:
       # Check out the current repository
       - name: Fetch Sources
         uses: actions/checkout@v4
+         # Make gradlew executable
+      - name: Set execute permissions for gradlew
+        run: chmod +x ./gradlew
 
       # Cleanup project
       - name: Cleanup
