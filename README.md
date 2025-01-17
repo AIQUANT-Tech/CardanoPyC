@@ -12,11 +12,14 @@
 > Click the <kbd>Use this template</kbd> button and clone it in IntelliJ IDEA.
 
 <!-- Plugin description -->
-**IntelliJ Platform Plugin Template** is a repository that provides a pure template to make it easier to create a new plugin project (check the [Creating a repository from a template][gh:template] article).
+CardanoPyC is a powerful IntelliJ-based plugin that provides seamless support for Haskell and Plutus development.
+It is designed to enhance developer productivity by offering:
+- Advanced syntax highlighting for Haskell and Plutus code.
+- Intelligent code completion to speed up development.
+- Integration with the Cardano API for real-time blockchain interaction.
+- An intuitive “Go to Run Menu >> CardanoAPI" feature allowing developers to quickly access Cardano API options directly from the IDE.
 
-The main goal of this template is to speed up the setup phase of plugin development for both new and experienced developers by preconfiguring the project scaffold and CI, linking to the proper documentation pages, and keeping everything organized.
-
-[gh:template]: https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
+- This plugin is perfect for developers building on the Cardano blockchain, enabling smooth and efficient smart contract development within the IntelliJ ecosystem.
 <!-- Plugin description end -->
 
 If you're still not quite sure what this is all about, read our introduction: [What is the IntelliJ Platform?][docs:intro]
@@ -408,7 +411,6 @@ Dependabot is a bot provided by GitHub to check the build configuration files an
 > and run
 > ```bash
 > ./gradlew wrapper
-> ```
 
 ### Changelog maintenance
 

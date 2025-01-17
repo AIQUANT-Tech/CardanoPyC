@@ -1,18 +1,20 @@
 <idea-plugin>
-    <id>org.jetbrains.plugins.template</id>
+    <id>aiquant.plugins</id>
     <name>CardanoPyC</name>
     <vendor>AIQUANT TECHNOLOGIES</vendor>
     <version>1.0.0</version>
 
-    <description>CardanoPyC is a powerful IntelliJ-based plugin that provides seamless support for Haskell and Plutus development.
+    <description>
+        CardanoPyC is a powerful IntelliJ-based plugin that provides seamless support for Haskell and Plutus development.
         It is designed to enhance developer productivity by offering:
 
         - Advanced syntax highlighting for Haskell and Plutus code.
         - Intelligent code completion to speed up development.
         - Integration with the Cardano API for real-time blockchain interaction.
 
-        This plugin is perfect for developers building on the Cardano blockchain, enabling smooth and efficient smart contract development within the IntelliJ ecosystem.</description>
-    <idea-version since-build="223" until-build="232.*" />
+        This plugin is perfect for developers building on the Cardano blockchain, enabling smooth and efficient smart contract development within the IntelliJ ecosystem.
+    </description>
+    <idea-version since-build="233" until-build="244.*" />
 
     <depends>com.intellij.modules.platform</depends>
 
