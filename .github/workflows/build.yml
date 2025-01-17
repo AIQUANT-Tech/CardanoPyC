@@ -71,9 +71,11 @@ jobs:
           echo "$CHANGELOG" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
-      # Build plugin
+     # Build plugin
       - name: Build plugin
-        run: ./gradlew buildPlugin
+        run: |
+          chmod +x ./gradlew
+          ./gradlew buildPlugin
 
       # Prepare plugin archive content for creating artifact
       - name: Prepare Plugin Artifact
