@@ -120,9 +120,11 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
-      # Run tests
+           # Run tests
       - name: Run Tests
-        run: ./gradlew check
+        run: |
+          chmod +x ./gradlew  # Give execute permission to gradlew
+          ./gradlew check      # Run the tests
 
       # Collect Tests Result of failed tests
       - name: Collect Tests Result
