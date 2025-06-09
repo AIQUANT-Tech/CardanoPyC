@@ -8,7 +8,7 @@
 ![IntelliJ Platform Plugin Template][file:intellij-platform-plugin-template-dark]
 ![IntelliJ Platform Plugin Template][file:intellij-platform-plugin-template-light]
 
-> [!NOTE]
+> [!NOTE].......
 > Click the <kbd>Use this template</kbd> button and clone it in IntelliJ IDEA.
 
 <!-- Plugin description -->
