@@ -28,6 +28,23 @@ This plugin is perfect for developers building on the Cardano blockchain, enabli
 
 ---
 
+## 📥 Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/AIQUANT-Tech/CardanoPyC
+   cd CardanoPyC
+   
+2. Debug the extension by clicking the Intellij IDE debug icon.
+
+## 🏗️ Development
+
+### ✅ Running Tests
+
+
+![Run Test](images/RunTest.png)
+
+
 # 🚀 Features
 
 ## 🎯 Haskell Language Support
