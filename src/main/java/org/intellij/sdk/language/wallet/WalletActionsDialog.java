@@ -49,7 +49,7 @@ public class WalletActionsDialog extends DialogWrapper {
 
         sendButton.addActionListener(e -> onSend());
         receiveButton.addActionListener(e -> onReceive());
-        balanceButton.addActionListener(e -> onViewBalance());
+        balanceButton.addActionListener(e -> onViewSpecificBalance());
         logoutButton.addActionListener(e -> onLogout());
 
         GridBagConstraints gbc = new GridBagConstraints();
@@ -125,8 +125,11 @@ public class WalletActionsDialog extends DialogWrapper {
                       }
                   }
 
-            private void onViewBalance() {
-                new ViewBalanceDialog().show();
+            private void onViewSpecificBalance() {
+
+                ViewSpecificBalanceDialog viewSpecificDialog = new ViewSpecificBalanceDialog();
+                 viewSpecificDialog.show();
+                close(OK_EXIT_CODE);
             }
 
             private void onLogout() {
@@ -144,6 +147,7 @@ public class WalletActionsDialog extends DialogWrapper {
                 SecureStorageUtil.removeCredential("wallet_address");
                 SecureStorageUtil.removeCredential("wallet_name");
                 SecureStorageUtil.removeCredential("wallet_password");
+                SecureStorageUtil.removeCredential("wallet_username");
             }
 
             @Override
@@ -155,4 +159,5 @@ public class WalletActionsDialog extends DialogWrapper {
             protected void doOKAction() {
                 close(OK_EXIT_CODE);
             }
+
         }

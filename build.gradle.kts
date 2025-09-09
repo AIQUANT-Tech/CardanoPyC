@@ -9,6 +9,8 @@ plugins {
     alias(libs.plugins.changelog) // Gradle Changelog Plugin
     alias(libs.plugins.qodana) // Gradle Qodana Plugin
     alias(libs.plugins.kover) // Gradle Kover Plugin
+
+
 }
 
 group = providers.gradleProperty("pluginGroup").get()
@@ -19,10 +21,12 @@ sourceSets {
         java.srcDirs("src/main/gen")
     }
 }
+
+
 // Set the JVM language level used to build the project.
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
+        languageVersion.set(JavaLanguageVersion.of(21))
     }
 }
 
@@ -39,13 +43,13 @@ repositories {
 // Dependencies are managed with Gradle version catalog - read more: https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
 dependencies {
     testImplementation(libs.junit)
-    testImplementation("org.junit.jupiter:junit-jupiter:5.10.0") // Use a suitable JUnit 5 version
-    testImplementation("org.opentest4j:opentest4j:1.2.0") // Explicitly include opentest4j
+
     implementation("org.apache.commons:commons-lang3:3.17.0")
     implementation("org.jetbrains:annotations:26.0.1")
     implementation ("com.google.code.gson:gson:2.10.1")
     implementation("com.bloxbean.cardano:cardano-client-lib:0.6.3")
     implementation("com.bloxbean.cardano:cardano-client-backend:0.6.3")
+    testImplementation("junit:junit:4.13.2")
     implementation("com.bloxbean.cardano:cardano-client-backend-blockfrost:0.6.3")
     // IntelliJ Platform Gradle Plugin Dependencies Extension - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-dependencies-extension.html
     intellijPlatform {
@@ -145,6 +149,11 @@ tasks {
     }
 }
 
+
+
+
+
+
 intellijPlatformTesting {
     runIde {
         register("runIdeForUiTests") {
@@ -163,5 +172,17 @@ intellijPlatformTesting {
                 robotServerPlugin()
             }
         }
+    }
+}
+
+
+tasks.buildSearchableOptions {
+    enabled = false
+}
+tasks.test {
+    useJUnit()
+//    useJUnitPlatform()  // <-- This is required for JUnit 5
+    testLogging {
+        events("passed", "failed", "skipped")
     }
 }
