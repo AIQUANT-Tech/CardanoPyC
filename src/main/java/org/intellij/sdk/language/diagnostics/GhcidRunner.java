@@ -461,7 +461,7 @@
 //}
 
 
-package com.diagnostics;
+package org.intellij.sdk.language.diagnostics;
 
 import com.intellij.execution.ExecutionException;
 import com.intellij.execution.configurations.GeneralCommandLine;

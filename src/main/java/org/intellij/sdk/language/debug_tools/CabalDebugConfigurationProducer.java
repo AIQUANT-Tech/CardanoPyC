@@ -33,7 +33,7 @@
 //    }
 //}
 
-package com.debug_tools;
+package org.intellij.sdk.language.debug_tools;
 
 import com.intellij.execution.actions.ConfigurationContext;
 import com.intellij.execution.actions.RunConfigurationProducer;

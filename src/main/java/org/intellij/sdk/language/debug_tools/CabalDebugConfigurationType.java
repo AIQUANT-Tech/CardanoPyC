@@ -59,7 +59,7 @@
 //    }
 //}
 
-package com.debug_tools;
+package org.intellij.sdk.language.debug_tools;
 
 import com.intellij.execution.configurations.ConfigurationFactory;
 import com.intellij.execution.configurations.ConfigurationType;

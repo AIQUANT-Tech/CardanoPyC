@@ -1,5 +1,5 @@
 
-package com.debug_tools;
+package org.intellij.sdk.language.debug_tools;
 
 import com.intellij.execution.ExecutionException;
 import com.intellij.execution.ExecutionResult;

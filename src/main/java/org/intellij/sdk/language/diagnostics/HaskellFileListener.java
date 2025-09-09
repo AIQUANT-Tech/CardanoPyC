@@ -1,4 +1,4 @@
-package com.diagnostics;
+package org.intellij.sdk.language.diagnostics;
 
 import com.intellij.openapi.fileEditor.FileEditorManager;
 import com.intellij.openapi.fileEditor.FileEditorManagerEvent;

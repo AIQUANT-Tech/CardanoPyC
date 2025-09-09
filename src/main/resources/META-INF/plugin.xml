@@ -232,38 +232,38 @@
         <notificationGroup id="Ghcid Notifications" displayType="BALLOON" />
 
         <!-- Project Services -->
-        <projectService serviceImplementation="com.diagnostics.GhcidRunner"/>
+        <projectService serviceImplementation="org.intellij.sdk.language.diagnostics.GhcidRunner"/>
 
         <!-- Program Runner -->
         <programRunner
-                implementation="com.debug_tools.CabalDebugRunner"
+                implementation="org.intellij.sdk.language.debug_tools.CabalDebugRunner"
                 id="CabalDebugRunner"
                 order="first"/>
 
         <!-- Configuration Type -->
-        <configurationType implementation="com.debug_tools.CabalDebugConfigurationType"/>
+        <configurationType implementation="org.intellij.sdk.language.debug_tools.CabalDebugConfigurationType"/>
 
         <!-- Run Configuration Producer -->
-        <runConfigurationProducer implementation="com.debug_tools.CabalDebugConfigurationProducer"/>
+        <runConfigurationProducer implementation="org.intellij.sdk.language.debug_tools.CabalDebugConfigurationProducer"/>
 
     </extensions>
 
     <projectListeners>
         <listener
-                class="com.diagnostics.HaskellFileListener"
+                class="org.intellij.sdk.language.diagnostics.HaskellFileListener"
                 topic="com.intellij.openapi.fileEditor.FileEditorManagerListener"/>
     </projectListeners>
 
     <actions>
         <action id="HaskellGhcid.Start"
-                class="com.diagnostics.StartGhcidAction"
+                class="org.intellij.sdk.language.diagnostics.StartGhcidAction"
                 text="Start GHCID"
                 description="Start Haskell error checking with ghcid">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
         </action>
 
         <action id="HaskellGhcid.Stop"
-                class="com.diagnostics.StopGhcidAction"
+                class="org.intellij.sdk.language.diagnostics.StopGhcidAction"
                 text="Stop GHCID"
                 description="Stop Haskell error checking">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
