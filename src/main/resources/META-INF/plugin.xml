@@ -228,4 +228,46 @@
         
     </extensions>
 
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="Ghcid Notifications" displayType="BALLOON" />
+
+        <!-- Project Services -->
+        <projectService serviceImplementation="com.diagnostics.GhcidRunner"/>
+
+        <!-- Program Runner -->
+        <programRunner
+                implementation="com.debug_tools.CabalDebugRunner"
+                id="CabalDebugRunner"
+                order="first"/>
+
+        <!-- Configuration Type -->
+        <configurationType implementation="com.debug_tools.CabalDebugConfigurationType"/>
+
+        <!-- Run Configuration Producer -->
+        <runConfigurationProducer implementation="com.debug_tools.CabalDebugConfigurationProducer"/>
+
+    </extensions>
+
+    <projectListeners>
+        <listener
+                class="com.diagnostics.HaskellFileListener"
+                topic="com.intellij.openapi.fileEditor.FileEditorManagerListener"/>
+    </projectListeners>
+
+    <actions>
+        <action id="HaskellGhcid.Start"
+                class="com.diagnostics.StartGhcidAction"
+                text="Start GHCID"
+                description="Start Haskell error checking with ghcid">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+
+        <action id="HaskellGhcid.Stop"
+                class="com.diagnostics.StopGhcidAction"
+                text="Stop GHCID"
+                description="Stop Haskell error checking">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
+
 </idea-plugin>
