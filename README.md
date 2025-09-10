@@ -21,7 +21,8 @@ CardanoPyC is a powerful IntelliJ-based plugin that provides seamless support fo
 - **Real-time Blockchain Data**: Fetch latest blocks, network state, transactions, pool information, and more
 - **Deployment Utilities**: Generate addresses 
 - **Wallet Management**: Integrated wallet management capabilities
-
+- **Diagnostics**: Highlight errors in editor and show proper suggestions for Haskell files (.hs)
+- **Debug Tools**: Show errors on debug console if code is not correct
 
 This plugin is perfect for developers building on the Cardano blockchain, enabling smooth and efficient smart contract development within the IntelliJ ecosystem.
 <!-- Plugin description end -->
@@ -45,7 +46,7 @@ This plugin is perfect for developers building on the Cardano blockchain, enabli
 ![Run Test](images/RunTest.png)
 
 
-# 🚀 Features
+# ✨ Key Features
 
 ## 🎯 Haskell Language Support
 - File type recognition for `.hs` files
@@ -122,18 +123,44 @@ The plugin provides an easy way to generate Cardano addresses from your Plutus s
 ![Deployment](https://raw.githubusercontent.com/aiquant2/CardanoPyC/refs/heads/main/images/generate_address.gif)
 
 
+### Diagnostics
+ - Highlights errors directly in the editor for Haskell files (.hs)
+ - Provides intelligent suggestions for fixing issues
+
+#### Error Highlighting
+![Diagnostics](https://raw.githubusercontent.com/aiquant2/CardanoPYC_Debugger/refs/heads/main/images/diagnostics.png)
+
+#### Error Suggestion
+![Error Suggestion](https://raw.githubusercontent.com/aiquant2/CardanoPYC_Debugger/refs/heads/main/images/error_suggestion.png)
+
+### Debug Tools
+- Displays compilation/runtime errors in the Debug Console
+- Helps developers quickly identify and resolve problems
+  ![Debug_part](https://raw.githubusercontent.com/aiquant2/CardanoPYC_Debugger/refs/heads/main/images/debug_part.gif)
+
+#### Debug Button
+![Debug Button](https://raw.githubusercontent.com/aiquant2/CardanoPYC_Debugger/refs/heads/main/images/debug_button.png)
+
+#### Debug Error(If any error)
+![Debug Error](https://raw.githubusercontent.com/aiquant2/CardanoPYC_Debugger/refs/heads/main/images/debug_error.png)
 ## 📋 Prerequisites
 
 - For generating addresses → cardano-node & cardano-cli must be installed (but node doesn’t need to be running).
+- For diagnostics → ghcid must be installed
+- For debugging → .cabal file must be present in root directory
 
+# 🔍 Debugging & Diagnostics
+- **Error Highlighting**: Real-time diagnostics with error highlighting in the editor for Haskell files (.hs)
+- **Intelligent Suggestions**: Context-aware suggestions for fixing compilation errors
+- **Debug Console**: Display compilation/runtime errors in the Debug Console with detailed information
+- **One-click Debugging**: Quick access to debug functionality through dedicated toolbar buttons
 
 ## Development Environment
 
 - IntelliJ IDEA version 231.x or higher
-
 - Java 17+ runtime environment
-
 - Minimum 4GB RAM recommended
+
 ## 🏗️ Project Structure
 ```
 CardanoPyC/
@@ -148,7 +175,7 @@ CardanoPyC/
 │   │   │       │   ├── CardanoScanApiClient.java
 │   │   │       │   └── CardanoScanFetcher.java
 │   │   │       ├── deployment/              # Node deployment utilities
-│   │   │       │   ├─CardanoCliAction
+│   │   │       │   └── CardanoCliAction
 │   │   │       │   
 │   │   │       ├── grammars/                # Language grammar definitions
 │   │   │       ├── highlighter/             # Syntax highlighting
@@ -156,7 +183,9 @@ CardanoPyC/
 │   │   │       ├── parser/                  # Language parsing
 │   │   │       ├── psi/                     # PSI tree elements
 │   │   │       ├── utils/                   # Utility classes
-│   │   │       └── wallet/                  # Wallet management
+│   │   │       ├── wallet/                  # Wallet management
+│   │   │       ├── diagnostics 
+│   │   │       └── debug_tools
 │   │   └── resources/
 │   │       ├── icons/                       # Image resources
 │   │       │   ├── cardano.svg
@@ -170,7 +199,25 @@ CardanoPyC/
 ├── settings.gradle.kts                     # Gradle settings
 └── README.md                               # This file           # Plugin icons
 ```
+## 🛠️ Usage
+### Installation
+##### cabal
+- install cabal from ghcup
+  link - https://www.haskell.org/ghcup/
 
+For Linux, run this in a terminal:
+```
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+ 
+ghcup tui
+ 
+```
+
+##### ghcid
+```
+$ cabal update
+$ cabal install ghcid
+```
 ## 🛠️ Build Configuration
 The project uses Gradle with the IntelliJ Platform Plugin. Key configuration files:
 - `build.gradle.kts` - Gradle build configuration
