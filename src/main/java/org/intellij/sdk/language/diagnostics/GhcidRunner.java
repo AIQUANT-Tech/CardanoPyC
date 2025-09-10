@@ -766,6 +766,7 @@ public class GhcidRunner implements Disposable {
         });
     }
 
+
     private static class MyGutterIconRenderer extends GutterIconRenderer {
         private final String errorType;
         private final String message;
