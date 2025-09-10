@@ -123,8 +123,8 @@ The plugin provides an easy way to generate Cardano addresses from your Plutus s
 ![Deployment](https://raw.githubusercontent.com/aiquant2/CardanoPyC/refs/heads/main/images/generate_address.gif)
 
 
-### Diagnostics
- - Highlights errors directly in the editor for Haskell files (.hs)
+## Diagnostics
+ - Real-time diagnostics with error highlighting in the editor for Haskell files (.hs)
  - Provides intelligent suggestions for fixing issues
 
 #### Error Highlighting
@@ -133,8 +133,8 @@ The plugin provides an easy way to generate Cardano addresses from your Plutus s
 #### Error Suggestion
 ![Error Suggestion](https://raw.githubusercontent.com/aiquant2/CardanoPYC_Debugger/refs/heads/main/images/error_suggestion.png)
 
-### Debug Tools
-- Displays compilation/runtime errors in the Debug Console
+## Debug Tools
+- Display compilation/runtime errors in the Debug Console with detailed information
 - Helps developers quickly identify and resolve problems
   ![Debug_part](https://raw.githubusercontent.com/aiquant2/CardanoPYC_Debugger/refs/heads/main/images/debug_part.gif)
 
@@ -149,11 +149,6 @@ The plugin provides an easy way to generate Cardano addresses from your Plutus s
 - For diagnostics → ghcid must be installed
 - For debugging → .cabal file must be present in root directory
 
-# 🔍 Debugging & Diagnostics
-- **Error Highlighting**: Real-time diagnostics with error highlighting in the editor for Haskell files (.hs)
-- **Intelligent Suggestions**: Context-aware suggestions for fixing compilation errors
-- **Debug Console**: Display compilation/runtime errors in the Debug Console with detailed information
-- **One-click Debugging**: Quick access to debug functionality through dedicated toolbar buttons
 
 ## Development Environment
 
