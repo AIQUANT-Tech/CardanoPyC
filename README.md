@@ -123,7 +123,7 @@ The plugin provides an easy way to generate Cardano addresses from your Plutus s
 ![Deployment](https://raw.githubusercontent.com/aiquant2/CardanoPyC/refs/heads/main/images/generate_address.gif)
 
 
-## Diagnostics
+## Diagnostics feature
  - Real-time diagnostics with error highlighting in the editor for Haskell files (.hs)
  - Provides intelligent suggestions for fixing issues
 
@@ -143,6 +143,8 @@ The plugin provides an easy way to generate Cardano addresses from your Plutus s
 
 #### Debug Error(If any error)
 ![Debug Error](https://raw.githubusercontent.com/aiquant2/CardanoPYC_Debugger/refs/heads/main/images/debug_error.png)
+
+![Fetch UTXO](https://raw.githubusercontent.com/aiquant2/CardanoPyC/refs/heads/main/images/Fetch_utxo.gif)
 ## 📋 Prerequisites
 
 - For generating addresses → cardano-node & cardano-cli must be installed (but node doesn’t need to be running).

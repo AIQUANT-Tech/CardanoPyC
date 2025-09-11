@@ -40,6 +40,12 @@
                     description="Fetch the network state from the Cardano Scan API"
                     icon="/icons/cardano.svg"/>
 
+            <action id="CardanoFetchUtxoAction"
+                    class="org.intellij.sdk.language.cardanoApi.actions.FetchUtxoAction"
+                    text="Fetch Script UTXO"
+                    description="Fetch the UTXO details for a given script address"
+                    icon="/icons/cardano.svg"/>
+
             <action id="CardanoProtocolParamsAction"
                     class="org.intellij.sdk.language.cardanoApi.actions.CardanoProtocolParamsAction"
                     text="Network Protocol Details"
