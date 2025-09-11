@@ -43,7 +43,7 @@ This plugin is perfect for developers building on the Cardano blockchain, enabli
 ### ✅ Running Tests
 
 
-![Run Test](images/RunTest.png)
+![Run Test](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/RunTest.png?raw=true)
 
 
 # ✨ Key Features
@@ -54,9 +54,9 @@ This plugin is perfect for developers building on the Cardano blockchain, enabli
 - Intelligent code completion
 - Custom parser definition for Haskell syntax
 
-![Syntax_highlighting](https://raw.githubusercontent.com/aiquant2/CardanoPyC/refs/heads/main/images/syntax_highlighting.png)
+![Syntax_highlighting](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/syntax_highlighting.png?raw=true)
 
-![Code_completion](https://raw.githubusercontent.com/aiquant2/CardanoPyC/refs/heads/main/images/code_completion.png)
+![Code_completion](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/code_completion.png?raw=true)
 
 ## 🔗 Cardano API Integration (Run Menu > CardanoAPI)
 - **Blockchain Data**: Latest block details, network state, protocol parameters
@@ -66,9 +66,9 @@ This plugin is perfect for developers building on the Cardano blockchain, enabli
 - **Assets & Policies**: Asset details, policy information, assets by address
 - **Stake Keys**: Address associations with stake keys
 
-![Cardano API UI](https://raw.githubusercontent.com/aiquant2/CardanoPyC/refs/heads/main/images/cardano_api.png)
+![Cardano API UI](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/cardano_api.png?raw=true)
 
-![API Data UI](https://raw.githubusercontent.com/aiquant2/CardanoPyC/refs/heads/main/images/api_data.png)
+![API Data UI](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/api_data.png?raw=true)
 
 
 ## 💼 Wallet Management
@@ -93,9 +93,9 @@ This plugin is perfect for developers building on the Cardano blockchain, enabli
     - **Export Address** → Copies wallet address for transactions or deployment.
 
 
-![Wallet_image](https://raw.githubusercontent.com/aiquant2/CardanoPyC/refs/heads/main/images/wallet.png)
+![Wallet_image](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/wallet.png?raw=true)
 
-![Wallet Management Demo](https://raw.githubusercontent.com/aiquant2/CardanoPyC/refs/heads/main/images/wallet_management.gif)
+![Wallet Management Demo](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/wallet_management.gif?raw=true)
 
 
 ## Deployment Tools
@@ -120,7 +120,7 @@ The plugin provides an easy way to generate Cardano addresses from your Plutus s
 
 ---
 
-![Deployment](https://raw.githubusercontent.com/aiquant2/CardanoPyC/refs/heads/main/images/generate_address.gif)
+![Deployment](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/generate_address.gif?raw=true)
 
 
 ## Diagnostics feature
@@ -144,7 +144,8 @@ The plugin provides an easy way to generate Cardano addresses from your Plutus s
 #### Debug Error(If any error)
 ![Debug Error](https://raw.githubusercontent.com/aiquant2/CardanoPYC_Debugger/refs/heads/main/images/debug_error.png)
 
-![Fetch UTXO](https://raw.githubusercontent.com/aiquant2/CardanoPyC/refs/heads/main/images/Fetch_utxo.gif)
+#### Fetch UTXO
+![Fetch UTXO](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Fetch_utxo.gif?raw=true)
 ## 📋 Prerequisites
 
 - For generating addresses → cardano-node & cardano-cli must be installed (but node doesn’t need to be running).
