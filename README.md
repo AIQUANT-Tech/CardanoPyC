@@ -38,6 +38,7 @@ This plugin is perfect for developers building on the Cardano blockchain, enabli
    
 2. Debug the extension by clicking the Intellij IDE debug icon.
 
+
 ## 🏗️ Development
 
 ### ✅ Running Tests
@@ -123,6 +124,26 @@ The plugin provides an easy way to generate Cardano addresses from your Plutus s
 ![Deployment](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/generate_address.gif?raw=true)
 
 
+## 🛠️ Usage
+### Installation
+##### cabal
+- install cabal from ghcup
+  link - https://www.haskell.org/ghcup/
+
+For Linux, run this in a terminal:
+```
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+ 
+ghcup tui
+ 
+```
+
+##### ghcid
+```
+$ cabal update
+$ cabal install ghcid
+```
+
 ## Diagnostics feature
  - Real-time diagnostics with error highlighting in the editor for Haskell files (.hs)
  - Provides intelligent suggestions for fixing issues
@@ -149,6 +170,7 @@ The plugin provides an easy way to generate Cardano addresses from your Plutus s
 press `ctrl + shift + a` → Fetch UTXO →  Enter your Script address → OK
 
 ![Fetch UTXO](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Fetch_utxo.gif?raw=true)
+
 ## 📋 Prerequisites
 
 - For generating addresses → cardano-node & cardano-cli must be installed (but node doesn’t need to be running).
@@ -200,25 +222,7 @@ CardanoPyC/
 ├── settings.gradle.kts                     # Gradle settings
 └── README.md                               # This file           # Plugin icons
 ```
-## 🛠️ Usage
-### Installation
-##### cabal
-- install cabal from ghcup
-  link - https://www.haskell.org/ghcup/
 
-For Linux, run this in a terminal:
-```
-curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
- 
-ghcup tui
- 
-```
-
-##### ghcid
-```
-$ cabal update
-$ cabal install ghcid
-```
 ## 🛠️ Build Configuration
 The project uses Gradle with the IntelliJ Platform Plugin. Key configuration files:
 - `build.gradle.kts` - Gradle build configuration
