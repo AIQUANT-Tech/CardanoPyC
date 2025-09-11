@@ -10,8 +10,6 @@ public class StartGhcidAction extends AnAction {
     @Override
         public void actionPerformed(@NotNull AnActionEvent e){
 
-        System.out.println("call");
-
         Project project = e.getProject();
 
         if (project != null) {

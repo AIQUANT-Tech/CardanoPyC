@@ -42,6 +42,8 @@ import java.util.Set;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.List;
+import java.util.concurrent.FutureTask;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -88,19 +90,42 @@ public class GhcidRunner implements Disposable {
         this.project = project;
     }
 
-    private boolean isGhcidInstalled() {
+//    private boolean isGhcidInstalled() {
+//        try {
+//            GeneralCommandLine checkCmd = new GeneralCommandLine()
+//                    .withExePath("ghcid")
+//                    .withParameters("--version");
+//            OSProcessHandler checkHandler = new OSProcessHandler(checkCmd);
+//            checkHandler.startNotify();
+//            checkHandler.waitFor(2000); // wait max 2s
+//            return checkHandler.getExitCode() == 0;
+//        } catch (Exception e) {
+//            return false;
+//        }
+//    }
+
+
+    public boolean isGhcidInstalled() {
         try {
-            GeneralCommandLine checkCmd = new GeneralCommandLine()
-                    .withExePath("ghcid")
-                    .withParameters("--version");
-            OSProcessHandler checkHandler = new OSProcessHandler(checkCmd);
-            checkHandler.startNotify();
-            checkHandler.waitFor(2000); // wait max 2s
-            return checkHandler.getExitCode() == 0;
+            ProcessBuilder pb = new ProcessBuilder("ghcid", "--version");
+            pb.redirectErrorStream(true);
+            Process process = pb.start();
+
+            // Run asynchronously
+            FutureTask<Boolean> task = new FutureTask<>(() -> {
+                int exitCode = process.waitFor();
+                return exitCode == 0;
+            });
+
+            new Thread(task).start();
+
+            return task.get(5, TimeUnit.SECONDS); // Wait max 5s
         } catch (Exception e) {
             return false;
         }
     }
+
+    /// /////
 
     // ... existing code ...
     private com.intellij.notification.Notification currentNotification;
