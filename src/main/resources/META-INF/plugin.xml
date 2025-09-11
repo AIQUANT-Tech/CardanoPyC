@@ -42,7 +42,7 @@
 
             <action id="CardanoFetchUtxoAction"
                     class="org.intellij.sdk.language.cardanoApi.actions.FetchUtxoAction"
-                    text="Fetch Script UTXO"
+                    text="Fetch UTXO"
                     description="Fetch the UTXO details for a given script address"
                     icon="/icons/cardano.svg"/>
 

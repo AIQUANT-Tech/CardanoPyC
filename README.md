@@ -128,23 +128,26 @@ The plugin provides an easy way to generate Cardano addresses from your Plutus s
  - Provides intelligent suggestions for fixing issues
 
 #### Error Highlighting
-![Diagnostics](https://raw.githubusercontent.com/aiquant2/CardanoPYC_Debugger/refs/heads/main/images/diagnostics.png)
+![Diagnostics](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/diagnostics.png?raw=true)
 
 #### Error Suggestion
-![Error Suggestion](https://raw.githubusercontent.com/aiquant2/CardanoPYC_Debugger/refs/heads/main/images/error_suggestion.png)
+![Error Suggestion](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/error_suggestion.png?raw=true)
 
 ## Debug Tools
 - Display compilation/runtime errors in the Debug Console with detailed information
 - Helps developers quickly identify and resolve problems
-  ![Debug_part](https://raw.githubusercontent.com/aiquant2/CardanoPYC_Debugger/refs/heads/main/images/debug_part.gif)
+  ![Debug_part](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/debug_part.gif?raw=true)
 
 #### Debug Button
-![Debug Button](https://raw.githubusercontent.com/aiquant2/CardanoPYC_Debugger/refs/heads/main/images/debug_button.png)
+![Debug Button](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/debug_button.png?raw=true)
 
 #### Debug Error(If any error)
-![Debug Error](https://raw.githubusercontent.com/aiquant2/CardanoPYC_Debugger/refs/heads/main/images/debug_error.png)
+![Debug Error](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/debug_error.png?raw=true)
 
-#### Fetch UTXO
+### Fetch UTXO
+
+press `ctrl + shift + a` → Fetch UTXO →  Enter your Script address → OK
+
 ![Fetch UTXO](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Fetch_utxo.gif?raw=true)
 ## 📋 Prerequisites
 

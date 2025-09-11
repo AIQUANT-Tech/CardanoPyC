@@ -1,4 +1,3 @@
-
 package org.intellij.sdk.language.debug_tools;
 
 import com.intellij.execution.ExecutionException;
