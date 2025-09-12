@@ -486,11 +486,31 @@
 
 package org.intellij.sdk.language.diagnostics;
 
+import java.awt.Color;
+import java.awt.Font;
+import java.nio.file.Path;
+import java.nio.file.Paths; // Changed from ProcessAdapter
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Set;
+import java.util.concurrent.FutureTask;
+import java.util.concurrent.TimeUnit;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import javax.swing.Icon;
+
+import org.jetbrains.annotations.NotNull;
+
 import com.intellij.execution.ExecutionException;
 import com.intellij.execution.configurations.GeneralCommandLine;
-import com.intellij.execution.process.ProcessEvent;
-import com.intellij.execution.process.ProcessListener; // Changed from ProcessAdapter
 import com.intellij.execution.process.OSProcessHandler;
+import com.intellij.execution.process.ProcessEvent;
+import com.intellij.execution.process.ProcessListener;
 import com.intellij.openapi.Disposable;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.diagnostic.Logger;
@@ -498,13 +518,13 @@ import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.event.DocumentEvent;
 import com.intellij.openapi.editor.event.DocumentListener;
-import com.intellij.openapi.editor.markup.RangeHighlighter;
-import com.intellij.openapi.editor.markup.TextAttributes;
 import com.intellij.openapi.editor.markup.EffectType;
-import com.intellij.openapi.editor.markup.MarkupModel;
+import com.intellij.openapi.editor.markup.GutterIconRenderer;
 import com.intellij.openapi.editor.markup.HighlighterLayer;
 import com.intellij.openapi.editor.markup.HighlighterTargetArea;
-import com.intellij.openapi.editor.markup.GutterIconRenderer;
+import com.intellij.openapi.editor.markup.MarkupModel;
+import com.intellij.openapi.editor.markup.RangeHighlighter;
+import com.intellij.openapi.editor.markup.TextAttributes;
 import com.intellij.openapi.fileEditor.FileDocumentManager;
 import com.intellij.openapi.fileEditor.FileEditorManager;
 import com.intellij.openapi.project.Project;
@@ -514,24 +534,8 @@ import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.ui.JBColor;
 import com.intellij.util.Alarm;
-import org.jetbrains.annotations.NotNull;
 
-import javax.swing.Icon;
-import java.awt.Color;
-import java.awt.Font;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.ArrayList;
-import java.util.Objects;
-import java.util.List;
-import java.util.concurrent.FutureTask;
-import java.util.concurrent.TimeUnit;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
 
 public class GhcidRunner implements Disposable {
     private static final Logger LOG = Logger.getInstance(GhcidRunner.class);
@@ -575,6 +579,21 @@ public class GhcidRunner implements Disposable {
     public GhcidRunner(Project project) {
         this.project = project;
     }
+
+//    private boolean isGhcidInstalled() {
+//        try {
+//            GeneralCommandLine checkCmd = new GeneralCommandLine()
+//                    .withExePath("ghcid")
+//                    .withParameters("--version");
+//            OSProcessHandler checkHandler = new OSProcessHandler(checkCmd);
+//            checkHandler.startNotify();
+//            checkHandler.waitFor(2000); // wait max 2s
+//            return checkHandler.getExitCode() == 0;
+//        } catch (Exception e) {
+//            return false;
+//        }
+//    }
+
 
     public boolean isGhcidInstalled() {
         try {
@@ -683,6 +702,8 @@ public class GhcidRunner implements Disposable {
                     // Optional: handle process termination
                 }
             });
+
+
 
             processHandler.startNotify();
             attachDocumentListeners();
@@ -844,7 +865,8 @@ public class GhcidRunner implements Disposable {
     }
 
     private int findErrorEndOffset(String text) {
-         for (int i = 0; i < text.length(); i++) {
+        System.out.println(text);
+        for (int i = 0; i < text.length(); i++) {
             char ch = text.charAt(i);
             if (Character.isWhitespace(ch) || ";,(){}[]".indexOf(ch) != -1) {
                 return i;
@@ -853,7 +875,7 @@ public class GhcidRunner implements Disposable {
         return text.length();
     }
 
-    private void clearFixedHighlights() {
+    void clearFixedHighlights() {
         Set<VirtualFile> oldFiles = new HashSet<>(highlighters.keySet());
         for (VirtualFile file : oldFiles) {
             if (!filesWithErrors.contains(file)) {
@@ -873,7 +895,7 @@ public class GhcidRunner implements Disposable {
         filesWithErrors.clear();
     }
 
-    private void clearAllHighlights() {
+    void clearAllHighlights() {
         Map<VirtualFile, List<RangeHighlighter>> copy = new HashMap<>(highlighters);
         highlighters.clear();
 
