@@ -864,7 +864,7 @@ public class GhcidRunner implements Disposable {
         }
     }
 
-    private int findErrorEndOffset(String text) {
+    int findErrorEndOffset(String text) {
         System.out.println(text);
         for (int i = 0; i < text.length(); i++) {
             char ch = text.charAt(i);
