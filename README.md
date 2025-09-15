@@ -12,7 +12,7 @@
 [![Build](https://github.com/JetBrains/intellij-platform-plugin-template/workflows/Build/badge.svg)][gh:build]
 [![Slack](https://img.shields.io/badge/Slack-%23intellij--platform-blue?style=flat-square&logo=Slack)](https://plugins.jetbrains.com/slack)
 
----
+
 <!-- Plugin description -->
 CardanoPyC is a powerful IntelliJ-based plugin that provides seamless support for Haskell and Plutus development with deep integration to the Cardano blockchain. It enhances developer productivity by offering:
 
@@ -21,7 +21,8 @@ CardanoPyC is a powerful IntelliJ-based plugin that provides seamless support fo
 - **Real-time Blockchain Data**: Fetch latest blocks, network state, transactions, pool information, and more
 - **Deployment Utilities**: Generate addresses 
 - **Wallet Management**: Integrated wallet management capabilities
-
+- **Diagnostics**: Highlight errors in editor and show proper suggestions for Haskell files (.hs)
+- **Debug Tools**: Show errors on debug console if code is not correct
 
 This plugin is perfect for developers building on the Cardano blockchain, enabling smooth and efficient smart contract development within the IntelliJ ecosystem.
 <!-- Plugin description end -->
@@ -37,15 +38,16 @@ This plugin is perfect for developers building on the Cardano blockchain, enabli
    
 2. Debug the extension by clicking the Intellij IDE debug icon.
 
+
 ## 🏗️ Development
 
 ### ✅ Running Tests
 
 
-![Run Test](images/RunTest.png)
+![Run Test](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/RunTest.png?raw=true)
 
 
-# 🚀 Features
+# ✨ Key Features
 
 ## 🎯 Haskell Language Support
 - File type recognition for `.hs` files
@@ -53,9 +55,9 @@ This plugin is perfect for developers building on the Cardano blockchain, enabli
 - Intelligent code completion
 - Custom parser definition for Haskell syntax
 
-![Syntax_highlighting](https://raw.githubusercontent.com/aiquant2/CardanoPyC/refs/heads/main/images/syntax_highlighting.png)
+![Syntax_highlighting](https://github.com/AIQUANT-Tech/CardanoPyC/main/feature/images/syntax_highlighting.png?raw=true)
 
-![Code_completion](https://raw.githubusercontent.com/aiquant2/CardanoPyC/refs/heads/main/images/code_completion.png)
+![Code_completion](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/code_completion.png?raw=true)
 
 ## 🔗 Cardano API Integration (Run Menu > CardanoAPI)
 - **Blockchain Data**: Latest block details, network state, protocol parameters
@@ -65,9 +67,9 @@ This plugin is perfect for developers building on the Cardano blockchain, enabli
 - **Assets & Policies**: Asset details, policy information, assets by address
 - **Stake Keys**: Address associations with stake keys
 
-![Cardano API UI](https://raw.githubusercontent.com/aiquant2/CardanoPyC/refs/heads/main/images/cardano_api.png)
+![Cardano API UI](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/cardano_api.png?raw=true)
 
-![API Data UI](https://raw.githubusercontent.com/aiquant2/CardanoPyC/refs/heads/main/images/api_data.png)
+![API Data UI](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/api_data.png?raw=true)
 
 
 ## 💼 Wallet Management
@@ -92,9 +94,9 @@ This plugin is perfect for developers building on the Cardano blockchain, enabli
     - **Export Address** → Copies wallet address for transactions or deployment.
 
 
-![Wallet_image](https://raw.githubusercontent.com/aiquant2/CardanoPyC/refs/heads/main/images/wallet.png)
+![Wallet_image](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/wallet.png?raw=true)
 
-![Wallet Management Demo](https://raw.githubusercontent.com/aiquant2/CardanoPyC/refs/heads/main/images/wallet_management.gif)
+![Wallet Management Demo](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/wallet_management.gif?raw=true)
 
 
 ## Deployment Tools
@@ -119,21 +121,69 @@ The plugin provides an easy way to generate Cardano addresses from your Plutus s
 
 ---
 
-![Deployment](https://raw.githubusercontent.com/aiquant2/CardanoPyC/refs/heads/main/images/generate_address.gif)
+![Deployment](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/generate_address.gif?raw=true)
 
+
+## 🛠️ Usage
+### Installation
+##### cabal
+- install cabal from ghcup
+  link - https://www.haskell.org/ghcup/
+
+For Linux, run this in a terminal:
+```
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+ 
+ghcup tui
+ 
+```
+
+##### ghcid
+```
+$ cabal update
+$ cabal install ghcid
+```
+
+## Diagnostics feature
+ - Real-time diagnostics with error highlighting in the editor for Haskell files (.hs)
+ - Provides intelligent suggestions for fixing issues
+
+#### Error Highlighting
+![Diagnostics](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/diagnostics.png?raw=true)
+
+#### Error Suggestion
+![Error Suggestion](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/error_suggestion.png?raw=true)
+
+## Debug Tools
+- Display compilation/runtime errors in the Debug Console with detailed information
+- Helps developers quickly identify and resolve problems
+  ![Debug_part](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/debug_part.gif?raw=true)
+
+#### Debug Button
+![Debug Button](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/debug_button.png?raw=true)
+
+#### Debug Error(If any error)
+![Debug Error](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/debug_error.png?raw=true)
+
+### Fetch UTXO
+
+press `ctrl + shift + a` → Fetch UTXO →  Enter your Script address → OK
+
+![Fetch UTXO](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/Fetch_utxo.gif?raw=true)
 
 ## 📋 Prerequisites
 
 - For generating addresses → cardano-node & cardano-cli must be installed (but node doesn’t need to be running).
+- For diagnostics → ghcid must be installed
+- For debugging → .cabal file must be present in root directory
 
 
 ## Development Environment
 
 - IntelliJ IDEA version 231.x or higher
-
 - Java 17+ runtime environment
-
 - Minimum 4GB RAM recommended
+
 ## 🏗️ Project Structure
 ```
 CardanoPyC/
@@ -148,7 +198,7 @@ CardanoPyC/
 │   │   │       │   ├── CardanoScanApiClient.java
 │   │   │       │   └── CardanoScanFetcher.java
 │   │   │       ├── deployment/              # Node deployment utilities
-│   │   │       │   ├─CardanoCliAction
+│   │   │       │   └── CardanoCliAction
 │   │   │       │   
 │   │   │       ├── grammars/                # Language grammar definitions
 │   │   │       ├── highlighter/             # Syntax highlighting
@@ -156,7 +206,9 @@ CardanoPyC/
 │   │   │       ├── parser/                  # Language parsing
 │   │   │       ├── psi/                     # PSI tree elements
 │   │   │       ├── utils/                   # Utility classes
-│   │   │       └── wallet/                  # Wallet management
+│   │   │       ├── wallet/                  # Wallet management
+│   │   │       ├── diagnostics 
+│   │   │       └── debug_tools
 │   │   └── resources/
 │   │       ├── icons/                       # Image resources
 │   │       │   ├── cardano.svg

@@ -150,10 +150,6 @@ tasks {
 }
 
 
-
-
-
-
 intellijPlatformTesting {
     runIde {
         register("runIdeForUiTests") {

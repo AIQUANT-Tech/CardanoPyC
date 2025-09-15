@@ -40,6 +40,12 @@
                     description="Fetch the network state from the Cardano Scan API"
                     icon="/icons/cardano.svg"/>
 
+            <action id="CardanoFetchUtxoAction"
+                    class="org.intellij.sdk.language.cardanoApi.actions.FetchUtxoAction"
+                    text="Fetch UTXO"
+                    description="Fetch the UTXO details for a given script address"
+                    icon="/icons/cardano.svg"/>
+
             <action id="CardanoProtocolParamsAction"
                     class="org.intellij.sdk.language.cardanoApi.actions.CardanoProtocolParamsAction"
                     text="Network Protocol Details"
@@ -227,5 +233,47 @@
                 implementationClass="org.intellij.sdk.language.HaskellCompletionContributor"/>
         
     </extensions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="Ghcid Notifications" displayType="BALLOON" />
+
+        <!-- Project Services -->
+        <projectService serviceImplementation="org.intellij.sdk.language.diagnostics.GhcidRunner"/>
+
+        <!-- Program Runner -->
+        <programRunner
+                implementation="org.intellij.sdk.language.debug_tools.CabalDebugRunner"
+                id="CabalDebugRunner"
+                order="first"/>
+
+        <!-- Configuration Type -->
+        <configurationType implementation="org.intellij.sdk.language.debug_tools.CabalDebugConfigurationType"/>
+
+        <!-- Run Configuration Producer -->
+        <runConfigurationProducer implementation="org.intellij.sdk.language.debug_tools.CabalDebugConfigurationProducer"/>
+
+    </extensions>
+
+    <projectListeners>
+        <listener
+                class="org.intellij.sdk.language.diagnostics.HaskellFileListener"
+                topic="com.intellij.openapi.fileEditor.FileEditorManagerListener"/>
+    </projectListeners>
+
+    <actions>
+        <action id="HaskellGhcid.Start"
+                class="org.intellij.sdk.language.diagnostics.StartGhcidAction"
+                text="Start GHCID"
+                description="Start Haskell error checking with ghcid">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+
+        <action id="HaskellGhcid.Stop"
+                class="org.intellij.sdk.language.diagnostics.StopGhcidAction"
+                text="Stop GHCID"
+                description="Stop Haskell error checking">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
 
 </idea-plugin>
