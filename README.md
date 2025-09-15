@@ -44,7 +44,7 @@ This plugin is perfect for developers building on the Cardano blockchain, enabli
 ### ✅ Running Tests
 
 
-![Run Test](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/RunTest.png?raw=true)
+![Run Test](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/RunTest.png?raw=true)
 
 
 # ✨ Key Features
@@ -55,9 +55,9 @@ This plugin is perfect for developers building on the Cardano blockchain, enabli
 - Intelligent code completion
 - Custom parser definition for Haskell syntax
 
-![Syntax_highlighting](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/syntax_highlighting.png?raw=true)
+![Syntax_highlighting](https://github.com/AIQUANT-Tech/CardanoPyC/main/feature/images/syntax_highlighting.png?raw=true)
 
-![Code_completion](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/code_completion.png?raw=true)
+![Code_completion](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/code_completion.png?raw=true)
 
 ## 🔗 Cardano API Integration (Run Menu > CardanoAPI)
 - **Blockchain Data**: Latest block details, network state, protocol parameters
@@ -67,9 +67,9 @@ This plugin is perfect for developers building on the Cardano blockchain, enabli
 - **Assets & Policies**: Asset details, policy information, assets by address
 - **Stake Keys**: Address associations with stake keys
 
-![Cardano API UI](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/cardano_api.png?raw=true)
+![Cardano API UI](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/cardano_api.png?raw=true)
 
-![API Data UI](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/api_data.png?raw=true)
+![API Data UI](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/api_data.png?raw=true)
 
 
 ## 💼 Wallet Management
@@ -94,9 +94,9 @@ This plugin is perfect for developers building on the Cardano blockchain, enabli
     - **Export Address** → Copies wallet address for transactions or deployment.
 
 
-![Wallet_image](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/wallet.png?raw=true)
+![Wallet_image](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/wallet.png?raw=true)
 
-![Wallet Management Demo](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/wallet_management.gif?raw=true)
+![Wallet Management Demo](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/wallet_management.gif?raw=true)
 
 
 ## Deployment Tools
@@ -121,7 +121,7 @@ The plugin provides an easy way to generate Cardano addresses from your Plutus s
 
 ---
 
-![Deployment](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/generate_address.gif?raw=true)
+![Deployment](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/generate_address.gif?raw=true)
 
 
 ## 🛠️ Usage
@@ -149,27 +149,27 @@ $ cabal install ghcid
  - Provides intelligent suggestions for fixing issues
 
 #### Error Highlighting
-![Diagnostics](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/diagnostics.png?raw=true)
+![Diagnostics](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/diagnostics.png?raw=true)
 
 #### Error Suggestion
-![Error Suggestion](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/error_suggestion.png?raw=true)
+![Error Suggestion](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/error_suggestion.png?raw=true)
 
 ## Debug Tools
 - Display compilation/runtime errors in the Debug Console with detailed information
 - Helps developers quickly identify and resolve problems
-  ![Debug_part](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/debug_part.gif?raw=true)
+  ![Debug_part](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/debug_part.gif?raw=true)
 
 #### Debug Button
-![Debug Button](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/debug_button.png?raw=true)
+![Debug Button](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/debug_button.png?raw=true)
 
 #### Debug Error(If any error)
-![Debug Error](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/debug_error.png?raw=true)
+![Debug Error](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/debug_error.png?raw=true)
 
 ### Fetch UTXO
 
 press `ctrl + shift + a` → Fetch UTXO →  Enter your Script address → OK
 
-![Fetch UTXO](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Fetch_utxo.gif?raw=true)
+![Fetch UTXO](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/Fetch_utxo.gif?raw=true)
 
 ## 📋 Prerequisites
 
