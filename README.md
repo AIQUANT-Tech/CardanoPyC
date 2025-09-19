@@ -158,7 +158,7 @@ $ cabal install ghcid
 ## Debug Tools
 - Display compilation/runtime errors in the Debug Console with detailed information
 - Helps developers quickly identify and resolve problems
-  ![Debug_part](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/debug_part.gif?raw=true)
+  ![Debug_tools](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/Debug_tools.gif?raw=true)
 
 #### Debug Button
 ![Debug Button](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/debug_button.png?raw=true)
