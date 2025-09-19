@@ -245,6 +245,8 @@ CardanoPyC is a powerful IntelliJ-based plugin designed to provide seamless supp
 
 It is built to enhance developer productivity by combining blockchain utilities, smart contract development features, and rich Haskell language support directly within the IntelliJ ecosystem.
 
+JetBrains Marketplace Link - https://plugins.jetbrains.com/plugin/26301-cardanopyc
+
 ![Marketplace](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Marketplace.png)
 
 ### Version
