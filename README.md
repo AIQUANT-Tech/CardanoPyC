@@ -239,6 +239,20 @@ The project uses Gradle with the IntelliJ Platform Plugin. Key configuration fil
 
 We welcome contributions! Please feel free to submit pull requests or open issues for bugs and feature requests.
 
+## Download Plugin from JetBrains Marketplace or Pycharm IDE
+
+![Marketplace](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Marketplace.png)
+
+### Version
+
+Updated Version on JetBrains Marketplace
+![Version](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/version.png)
+
+### On Pycharm IDE
+
+![Version](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Pycharm.png)
+
+
 ## 🆘 Support
 
 For issues or questions related to the CardanoPyC plugin, please contact AIQUANT TECHNOLOGIES support through the plugin's GitHub repository.
