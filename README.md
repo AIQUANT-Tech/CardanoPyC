@@ -161,7 +161,7 @@ $ cabal install ghcid
   ![Debug_tools](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/Debug_tools.gif?raw=true)
 
 #### Debug Button
-![Debug Button](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/debug_button.png?raw=true)
+![Debug Button](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/debug_button.png)
 
 #### Debug Error(If any error)
 ![Debug Error](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/debug_error.png?raw=true)
