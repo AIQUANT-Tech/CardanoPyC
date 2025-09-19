@@ -37,7 +37,7 @@ It is built to enhance developer productivity by combining blockchain utilities,
 
 JetBrains Marketplace Link - https://plugins.jetbrains.com/plugin/26301-cardanopyc
 
-![Marketplace](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Marketplace.png?raw=true)
+![Marketplace](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/Marketplace.png?raw=true)
 
 ### 📦 Version
 
@@ -56,7 +56,7 @@ To install it in **PyCharm**, follow these steps:
 6. Click **OK**
 7. Restart your IDE to activate the plugin
 
-![Version](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/version.png?raw=true)
+![Version](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/version.png?raw=true)
 
 
 ## Installation (From PyCharm IDE)
@@ -69,7 +69,7 @@ If you want to install the plugin directly from **PyCharm IDE**, follow these st
 4. Click **Install**
 5. Restart your IDE to activate the plugin
 
-![Version](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Pycharm.png?raw=true)
+![Version](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/Pycharm.png?raw=true)
 
 
 ## 📥 Installation from Source
@@ -184,7 +184,7 @@ $ cabal install ghcid
 ## Diagnostics feature
  - Real-time diagnostics with error highlighting in the editor for Haskell files (.hs)
  - Provides intelligent suggestions for fixing issues
-   ![Diagnostic_feature](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/diagnostic_feature.gif?raw=true)
+   ![Diagnostic_feature](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/diagnostic_feature.gif?raw=true)
 
 #### Error Highlighting
 ![Diagnostics](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/diagnostics.png?raw=true)
@@ -195,10 +195,10 @@ $ cabal install ghcid
 ## Debug Tools
 - Display compilation/runtime errors in the Debug Console with detailed information
 - Helps developers quickly identify and resolve problems
-![Debug_tools](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Debug_tools.gif?raw=true)
+![Debug_tools](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/Debug_tools.gif?raw=true)
 
 #### Debug Button
-![Debug Button](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/debug_button.png?raw=true)
+![Debug Button](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/debug_button.png?raw=true)
 
 #### Debug Error(If any error)
 ![Debug Error](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/debug_error.png?raw=true)
