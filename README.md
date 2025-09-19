@@ -28,8 +28,52 @@ This plugin is perfect for developers building on the Cardano blockchain, enabli
 <!-- Plugin description end -->
 
 ---
+# 📥 Installation
+#### Install Plugin from JetBrains Marketplace or Pycharm IDE
 
-## 📥 Installation
+CardanoPyC is a powerful IntelliJ-based plugin designed to provide seamless support for Haskell and Plutus development with deep integration into the Cardano blockchain.
+
+It is built to enhance developer productivity by combining blockchain utilities, smart contract development features, and rich Haskell language support directly within the IntelliJ ecosystem.
+
+JetBrains Marketplace Link - https://plugins.jetbrains.com/plugin/26301-cardanopyc
+
+![Marketplace](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Marketplace.png?raw=true)
+
+### 📦 Version
+
+Current release: 3.0.9
+
+## Installation (From JetBrains Marketplace .zip)
+
+If you downloaded the plugin from **JetBrains Marketplace**, it will come as a `.zip` file.  
+To install it in **PyCharm**, follow these steps:
+
+1. Open **PyCharm IDE**
+2. Go to **Settings** → **Plugins**
+3. Click the **⚙️ (settings icon)** in the top-right corner
+4. Select **Install Plugin from Disk**
+5. Upload the downloaded `.zip` file
+6. Click **OK**
+7. Restart your IDE to activate the plugin
+
+![Version](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/version.png?raw=true)
+
+
+
+## Installation (From PyCharm IDE)
+
+If you want to install the plugin directly from **PyCharm IDE**, follow these steps:
+
+1. Open **PyCharm IDE**
+2. Go to **Settings** → **Plugins**
+3. In the **Marketplace** tab, search for **"CardanoPyC"**
+4. Click **Install**
+5. Restart your IDE to activate the plugin
+
+![Version](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Pycharm.png?raw=true)
+
+
+## 📥 Installation from Source
 
 1. Clone the repository:
    ```
@@ -55,7 +99,7 @@ This plugin is perfect for developers building on the Cardano blockchain, enabli
 - Intelligent code completion
 - Custom parser definition for Haskell syntax
 
-![Syntax_highlighting](https://github.com/AIQUANT-Tech/CardanoPyC/main/feature/images/syntax_highlighting.png?raw=true)
+![Syntax_highlighting](https://github.com/AIQUANT-Tech/CardanoPyC/main/images/syntax_highlighting.png?raw=true)
 
 ![Code_completion](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/code_completion.png?raw=true)
 
@@ -235,30 +279,10 @@ The project uses Gradle with the IntelliJ Platform Plugin. Key configuration fil
 - Main plugin icon: `plugin-hs-Icon.svg`
 - Cardano-specific icons: `cardano.svg`
 
+
 ## 🤝 Contributing
 
 We welcome contributions! Please feel free to submit pull requests or open issues for bugs and feature requests.
-
-## Download Plugin from JetBrains Marketplace or Pycharm IDE
-
-CardanoPyC is a powerful IntelliJ-based plugin designed to provide seamless support for Haskell and Plutus development with deep integration into the Cardano blockchain.
-
-It is built to enhance developer productivity by combining blockchain utilities, smart contract development features, and rich Haskell language support directly within the IntelliJ ecosystem.
-
-JetBrains Marketplace Link - https://plugins.jetbrains.com/plugin/26301-cardanopyc
-
-![Marketplace](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Marketplace.png?raw=true)
-
-### 📦 Version
-
-Current release: 3.0.9
-
-Updated Version on JetBrains Marketplace
-![Version](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/version.png?raw=true)
-
-### On Pycharm IDE
-
-![Version](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Pycharm.png?raw=true)
 
 
 ## 🆘 Support
