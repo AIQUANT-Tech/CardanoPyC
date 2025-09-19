@@ -147,6 +147,7 @@ $ cabal install ghcid
 ## Diagnostics feature
  - Real-time diagnostics with error highlighting in the editor for Haskell files (.hs)
  - Provides intelligent suggestions for fixing issues
+   ![Diagnostic_feature](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/diagnostic_feature.gif?raw=true)
 
 #### Error Highlighting
 ![Diagnostics](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/diagnostics.png?raw=true)
