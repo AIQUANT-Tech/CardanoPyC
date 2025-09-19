@@ -28,24 +28,61 @@ This plugin is perfect for developers building on the Cardano blockchain, enabli
 <!-- Plugin description end -->
 
 ---
+# 📥 Installation
+#### Install Plugin from JetBrains Marketplace or Pycharm IDE
 
-## 📥 Installation
+CardanoPyC is a powerful IntelliJ-based plugin designed to provide seamless support for Haskell and Plutus development with deep integration into the Cardano blockchain.
+
+It is built to enhance developer productivity by combining blockchain utilities, smart contract development features, and rich Haskell language support directly within the IntelliJ ecosystem.
+
+JetBrains Marketplace Link - https://plugins.jetbrains.com/plugin/26301-cardanopyc
+
+![Marketplace](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Marketplace.png?raw=true)
+
+### 📦 Version
+
+Current release: 3.0.9
+
+## Installation (From JetBrains Marketplace .zip)
+
+If you downloaded the plugin from **JetBrains Marketplace**, it will come as a `.zip` file.  
+To install it in **PyCharm**, follow these steps:
+
+1. Open **PyCharm IDE**
+2. Go to **Settings** → **Plugins**
+3. Click the **⚙️ (settings icon)** in the top-right corner
+4. Select **Install Plugin from Disk**
+5. Upload the downloaded `.zip` file
+6. Click **OK**
+7. Restart your IDE to activate the plugin
+
+![Version](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/version.png?raw=true)
+
+
+## Installation (From PyCharm IDE)
+
+If you want to install the plugin directly from **PyCharm IDE**, follow these steps:
+
+1. Open **PyCharm IDE**
+2. Go to **Settings** → **Plugins**
+3. In the **Marketplace** tab, search for **"CardanoPyC"**
+4. Click **Install**
+5. Restart your IDE to activate the plugin
+
+![Version](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Pycharm.png?raw=true)
+
+
+## 📥 Installation from Source
 
 1. Clone the repository:
    ```
    git clone https://github.com/AIQUANT-Tech/CardanoPyC
    cd CardanoPyC
-   
+   ```
 2. Debug the extension by clicking the Intellij IDE debug icon.
 
 
 ## 🏗️ Development
-
-### ✅ Running Tests
-
-
-![Run Test](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/RunTest.png?raw=true)
-
 
 # ✨ Key Features
 
@@ -55,7 +92,7 @@ This plugin is perfect for developers building on the Cardano blockchain, enabli
 - Intelligent code completion
 - Custom parser definition for Haskell syntax
 
-![Syntax_highlighting](https://github.com/AIQUANT-Tech/CardanoPyC/main/feature/images/syntax_highlighting.png?raw=true)
+![Syntax_highlighting](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/syntax_highlighting.png?raw=true)
 
 ![Code_completion](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/code_completion.png?raw=true)
 
@@ -147,6 +184,7 @@ $ cabal install ghcid
 ## Diagnostics feature
  - Real-time diagnostics with error highlighting in the editor for Haskell files (.hs)
  - Provides intelligent suggestions for fixing issues
+   ![Diagnostic_feature](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/diagnostic_feature.gif?raw=true)
 
 #### Error Highlighting
 ![Diagnostics](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/diagnostics.png?raw=true)
@@ -157,19 +195,26 @@ $ cabal install ghcid
 ## Debug Tools
 - Display compilation/runtime errors in the Debug Console with detailed information
 - Helps developers quickly identify and resolve problems
-  ![Debug_part](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/debug_part.gif?raw=true)
+![Debug_tools](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Debug_tools.gif?raw=true)
 
 #### Debug Button
-![Debug Button](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/debug_button.png?raw=true)
+![Debug Button](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/debug_button.png?raw=true)
 
 #### Debug Error(If any error)
 ![Debug Error](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/debug_error.png?raw=true)
 
 ### Fetch UTXO
 
-press `ctrl + shift + a` → Fetch UTXO →  Enter your Script address → OK
+To fetch UTXO details using the plugin:
+
+1. Press **`Ctrl + Shift + A`**
+2. Search for **Fetch UTXO**
+3. Enter your **Script Address**
+4. Click **OK**
 
 ![Fetch UTXO](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/Fetch_utxo.gif?raw=true)
+
+⚠️ Ensure that your network connection is properly set (preprod / preview / mainnet).
 
 ## 📋 Prerequisites
 
@@ -183,6 +228,12 @@ press `ctrl + shift + a` → Fetch UTXO →  Enter your Script address → OK
 - IntelliJ IDEA version 231.x or higher
 - Java 17+ runtime environment
 - Minimum 4GB RAM recommended
+
+### ✅ Running Tests
+
+![Run Test](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/RunTest.png?raw=true)
+
+
 
 ## 🏗️ Project Structure
 ```
@@ -234,9 +285,11 @@ The project uses Gradle with the IntelliJ Platform Plugin. Key configuration fil
 - Main plugin icon: `plugin-hs-Icon.svg`
 - Cardano-specific icons: `cardano.svg`
 
+
 ## 🤝 Contributing
 
 We welcome contributions! Please feel free to submit pull requests or open issues for bugs and feature requests.
+
 
 ## 🆘 Support
 
