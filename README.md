@@ -59,7 +59,6 @@ To install it in **PyCharm**, follow these steps:
 ![Version](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/version.png?raw=true)
 
 
-
 ## Installation (From PyCharm IDE)
 
 If you want to install the plugin directly from **PyCharm IDE**, follow these steps:
@@ -84,12 +83,6 @@ If you want to install the plugin directly from **PyCharm IDE**, follow these st
 
 
 ## 🏗️ Development
-
-### ✅ Running Tests
-
-
-![Run Test](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/RunTest.png?raw=true)
-
 
 # ✨ Key Features
 
@@ -212,9 +205,16 @@ $ cabal install ghcid
 
 ### Fetch UTXO
 
-press `ctrl + shift + a` → Fetch UTXO →  Enter your Script address → OK
+To fetch UTXO details using the plugin:
+
+1. Press **`Ctrl + Shift + A`**
+2. Search for **Fetch UTXO**
+3. Enter your **Script Address**
+4. Click **OK**
 
 ![Fetch UTXO](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/Fetch_utxo.gif?raw=true)
+
+⚠️ Ensure that your network connection is properly set (preprod / preview / mainnet).
 
 ## 📋 Prerequisites
 
@@ -228,6 +228,12 @@ press `ctrl + shift + a` → Fetch UTXO →  Enter your Script address → OK
 - IntelliJ IDEA version 231.x or higher
 - Java 17+ runtime environment
 - Minimum 4GB RAM recommended
+
+### ✅ Running Tests
+
+![Run Test](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/RunTest.png?raw=true)
+
+
 
 ## 🏗️ Project Structure
 ```
