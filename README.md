@@ -78,7 +78,7 @@ If you want to install the plugin directly from **PyCharm IDE**, follow these st
    ```
    git clone https://github.com/AIQUANT-Tech/CardanoPyC
    cd CardanoPyC
-   
+   ```
 2. Debug the extension by clicking the Intellij IDE debug icon.
 
 
@@ -92,7 +92,7 @@ If you want to install the plugin directly from **PyCharm IDE**, follow these st
 - Intelligent code completion
 - Custom parser definition for Haskell syntax
 
-![Syntax_highlighting](https://github.com/AIQUANT-Tech/CardanoPyC/main/images/syntax_highlighting.png?raw=true)
+![Syntax_highlighting](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/syntax_highlighting.png?raw=true)
 
 ![Code_completion](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/code_completion.png?raw=true)
 
