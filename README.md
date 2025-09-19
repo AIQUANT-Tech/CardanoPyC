@@ -158,10 +158,10 @@ $ cabal install ghcid
 ## Debug Tools
 - Display compilation/runtime errors in the Debug Console with detailed information
 - Helps developers quickly identify and resolve problems
-![Debug_tools](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Debug_tools.gif)
+![Debug_tools](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Debug_tools.gif?raw=true)
 
 #### Debug Button
-![Debug Button](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/debug_button.png)
+![Debug Button](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/debug_button.png?raw=true)
 
 #### Debug Error(If any error)
 ![Debug Error](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/images/debug_error.png?raw=true)
@@ -247,16 +247,18 @@ It is built to enhance developer productivity by combining blockchain utilities,
 
 JetBrains Marketplace Link - https://plugins.jetbrains.com/plugin/26301-cardanopyc
 
-![Marketplace](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Marketplace.png)
+![Marketplace](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Marketplace.png?raw=true)
 
-### Version
+### 📦 Version
+
+Current release: 3.0.9
 
 Updated Version on JetBrains Marketplace
-![Version](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/version.png)
+![Version](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/version.png?raw=true)
 
 ### On Pycharm IDE
 
-![Version](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Pycharm.png)
+![Version](https://github.com/AIQUANT-Tech/CardanoPyC/blob/feature/images/Pycharm.png?raw=true)
 
 
 ## 🆘 Support
