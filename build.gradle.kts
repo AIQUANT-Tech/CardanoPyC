@@ -182,3 +182,7 @@ tasks.test {
         events("passed", "failed", "skipped")
     }
 }
+// Explicitly disable prepareJarSearchableOptions task
+tasks.named("prepareJarSearchableOptions") {
+    enabled = false
+}
