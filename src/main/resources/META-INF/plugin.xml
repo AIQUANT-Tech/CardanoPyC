@@ -1,14 +1,139 @@
 <idea-plugin>
     <id>aiquant.plugins</id>
     <name>CardanoPyC</name>
+    <version>3.1.0</version>
     <vendor>AIQUANT TECHNOLOGIES</vendor>
-
 
     <idea-version since-build="243" until-build="252.*" />
 
+    <change-notes><![CDATA[
+
+      <h2>v3.1.0</h2>
+      <h3>Readme & Documentation Improvements</h3>
+      <ul>
+      <li><b>Expanded User Guide</b>: Added detailed explanations and step-by-step instructions for all existing features.</li>
+      <li><b>Improved Examples</b>: Included more practical examples for wallet management, Plutus script deployment, and Haskell diagnostics.</li>
+      <li><b>Clearer Error Guidance</b>: Updated instructions to help users resolve common issues with Ghcid and Cardano CLI setup.</li>
+      <li><b>Enhanced Feature Descriptions</b>: Added more context and usage tips for diagnostic tools, wallet management, and API integration.</li>
+      <li><b>Formatting & Readability</b>: Improved markdown structure, headings, and code blocks in the readme for easier navigation.</li>
+      </ul>
+
+
+      <h2>v3.0.9</h2>
+      <h3>Diagnostic feature</h3>
+      <ul>
+      <li><b>Error Highlighting</b>: Instantly highlights errors in Haskell files </li>
+      <li><b>Error Suggestions</b>: Provides actionable suggestions for quick fixes </li>
+      <li><b>Gutter Icons</b>: Displays intuitive error and warning icons in the editor gutter with tooltips showing full messages.</li>
+      <li><b>Automatic Document Monitoring</b>: Monitors all open Haskell files and updates diagnostics as you edit.</li>
+      <li><b>Debounced Restart</b>: Efficiently restarts Ghcid after edits with a 500ms debounce to prevent excessive processing.</li>
+      <li><b>Cabal Project Support</b>: Automatically detects Cabal projects and runs `cabal repl` for diagnostics.</li>
+      <li><b>Notification System</b>: Alerts users when Ghcid is not installed, with instructions to install via Cabal or Stack.</li>
+      </ul>
+
+      <h3>Debug Tools</h3>
+      <ul>
+      <li><b>Cabal Debug Runner</b>: Seamlessly run and debug Haskell projects using Cabal, with full REPL integration.</li>
+      <li><b>Integrated Debug Console</b>: Automatically launches GHCi with clear status messages</li>
+      <li><b>Context-Aware Configuration</b>: Detects Cabal projects automatically and sets up debug configurations without manual setup.</li>
+      <li><b>Async Execution</b>: Runs processes asynchronously with IntelliJ’s Run/Debug framework, ensuring smooth IDE performance.</li>
+      <li><b>UTXO Fetcher</b>: Retrieves and displays the latest UTXO details for any Cardano script address.</li>
+      <li><b>Datum Handling</b>: Automatically fetches datum hash or inline datum for each UTXO, providing full transaction context.</li>
+      <li><b>Interactive Popup</b>: Displays UTXO and datum details in a scrollable dialog for easy inspection.</li>
+      </ul>
+
+      <h2>v3.0.6</h2>
+      <h3>Wallet Management</h3>
+      <ul>
+      <li><b>Blockfrost API Validator</b>: Validates API keys and ensures connectivity across <i>mainnet</i>, <i>preprod</i>, and <i>preview</i> networks.</li>
+      <li><b>Wallet Generator</b>: Securely generates a new Cardano wallet with mnemonic seed phrase, base address, and credential setup (username & password).</li>
+      <li><b>Wallet Restore</b>: Restore any Cardano wallet using a 24-word mnemonic seed phrase with full validation.</li>
+      <li><b>Secure Storage Integration</b>: Mnemonic, base address, and user credentials are encrypted and stored safely using <code>SecureStorageUtil</code>.</li>
+      <li><b>Interactive Wallet Dialog</b>: Provides UI to view, copy, and store wallet details with clear recovery instructions.</li>
+      <li><b>Send ADA Dialog</b>: Securely transfer ADA to any Cardano address with transaction metadata support.</li>
+      <li><b>View Balance & Transactions</b>: Fetch real-time wallet balance and display the last 5 transactions with date, block height, and Tx hash.</li>
+      <li><b>Wallet Actions Panel</b>: Centralized UI to <i>Send</i>, <i>Receive</i>, <i>View Balance</i>, and <i>Logout</i> with a modern interactive design.</li>
+      <li><b>Receive ADA Support</b>: Display and copy your wallet’s base address for receiving payments.</li>
+      <li><b>Secure Logout</b>: Clears all sensitive wallet data (mnemonic, credentials, addresses) from secure storage.</li>
+      </ul>
+
+
+      <h3>Deployment of Smart Contract</h3>
+      <ul>
+      <li><b>Plutus Script Address Builder</b>: Generate Cardano addresses for Plutus scripts directly from IntelliJ.</li>
+      <li><b>Network Support</b>: Supports <i>preview</i>, <i>preprod</i>, and <i>mainnet</i> networks with automatic flag handling.</li>
+      <li><b>Cardano CLI Validation</b>: Checks that <code>cardano-node</code> and <code>cardano-cli</code> are installed before performing operations.</li>
+      <li><b>Interactive Dialog</b>: UI prompt to input Plutus script file path and select network type with validation for required fields.</li>
+      <li><b>Automatic File Handling</b>: Saves generated script addresses to <code>.addr</code> files and reads the content for display.</li>
+      <li><b>Notifications</b>: Success and error messages are displayed in IntelliJ with detailed info and file paths.</li>
+      <li><b>Background Execution</b>: Runs address generation in a separate thread to keep the IDE responsive.</li>
+      <li><b>Error Handling</b>: Detects missing files, invalid paths, and CLI errors with clear feedback to the user.</li>
+      </ul>
+
+
+      <h2>v3.0.5</h2>
+      <h3>Cardano API Integration</h3>
+      <ul>
+      <li><b>CardanoScan API Client</b>: Implements HTTP client to fetch Cardano blockchain data including blocks, network state, transactions, pools, assets, and governance info.</li>
+      <li><b>Extensive API Coverage</b>: Supports endpoints for latest block, network state, protocol parameters, pool info/status/list, reward account info, governance hot/cold key info, DRep info, governance actions, asset details, policy details, and transaction lists.</li>
+      <li><b>Dynamic Queries</b>: Converts user inputs such as addresses, pool IDs, asset IDs, block keys, and page numbers into valid API requests.</li>
+      <li><b>Thread-Safe Session Management</b>: Stores API keys in a concurrent session cache for safe access across threads.</li>
+      <li><b>API Key Handling</b>: Prompts the user for a CardanoScan API key if missing, caches it securely, and ensures all requests include the API key.</li>
+      <li><b>Async Data Fetching</b>: Runs all API calls in background threads to prevent blocking the IntelliJ UI.</li>
+      <li><b>JSON Formatting</b>: Automatically formats raw JSON responses into readable, pretty-printed output using Gson.</li>
+      <li><b>Terminal Integration</b>: Displays API responses in a dedicated "Cardano Data Terminal" within IntelliJ, reusing existing terminal content or creating a new one as needed.</li>
+      <li><b>Exception Handling</b>: Shows descriptive error dialogs for failed API requests and handles InterruptedExceptions gracefully.</li>
+      <li><b>Reusable Functional Interface</b>: Uses a generic <code>ApiClientFunction</code> interface to reduce boilerplate code for multiple API endpoints.</li>
+      </ul>
+
+      <h3>Syntax Highlighting</h3>
+      <ul>
+      <li><b>Keyword</b>: Reserved Haskell keywords like <code>import, module, data, type, class, instance, let, in, where, if, then, else, case, of</code></li>
+      <li><b>Number</b>: Numeric literals including decimal, float, hexadecimal, and octal numbers</li>
+      <li><b>String</b>: String literals enclosed in double quotes and character literals</li>
+      <li><b>Comment</b>: Line comments starting with <code>--</code> and block comments enclosed with <code>{- -}</code></li>
+      <li><b>Doc Comment</b>: Haddock-style documentation comments starting with <code>-- |</code> or <code>{-| |-}</code></li>
+      <li><b>Pragma</b>: Compiler pragmas enclosed with <code>{-# #-}</code></li>
+      <li><b>Operator</b>: Symbols like <code>+, -, *, /, :, ::, ->, =>, `</code> and user-defined operators</li>
+      <li><b>Constructor</b>: Data constructors like <code>Just, Nothing, Node, Leaf</code></li>
+      <li><b>Function Name</b>: Named functions and qualified names in Haskell code</li>
+      <li><b>Variable</b>: Local and global variable identifiers</li>
+      <li><b>Type</b>: Type identifiers like <code>Int, String, Tree a</code></li>
+      <li><b>Function Declaration</b>: Function definitions like <code>moveRight :: Path a -> Path a</code></li>
+      </ul>
+
+
+      <h3>Code Completion</h3>
+      <ul>
+      <li><b>varid</b>: Represents Haskell variable identifiers (VAR_ID).</li>
+      <li><b>conid</b>: Represents Haskell constructor identifiers (CON_ID).</li>
+      <li><b>q_name</b>: Qualified name, can be varid, conid, or a qualified combination.</li>
+      <li><b>q_var_con</b>: Qualified variable or constructor reference.</li>
+      <li><b>q_con</b>: Qualified constructor reference.</li>
+      <li><b>ttype</b>: Haskell type expression, supports btype, list types, and function types.</li>
+      <li><b>atype</b>: Atomic type expression, supports forall, parentheses, brackets, and literals.</li>
+      <li><b>expression</b>: Haskell expressions, including line_expression, literals, and quasi-quotes.</li>
+      <li><b>module_declaration</b>: Represents a module definition including name, exports, and pragmas.</li>
+      <li><b>import_declaration</b>: Haskell import statements with optional qualification and specifiers.</li>
+      <li><b>data_declaration</b>: Haskell `data` type declarations with constructors and deriving clauses.</li>
+      <li><b>newtype_declaration</b>: Haskell `newtype` declarations with optional deriving.</li>
+      <li><b>class_declaration</b>: Haskell `class` declarations with optional superclasses and constraints.</li>
+      <li><b>instance_declaration</b>: Haskell `instance` declarations with optional overlapping/overlappable pragmas.</li>
+      <li><b>type_declaration</b>: Haskell `type` alias declarations.</li>
+      <li><b>literal</b>: All Haskell literals including decimal, float, char, string, hex, octal.</li>
+      <li><b>pragma</b>: Haskell pragma blocks (e.g., OPTIONS_GHC).</li>
+      <li><b>comment</b>: Single-line comment starting with `--`.</li>
+      <li><b>ncomment</b>: Multi-line block comment enclosed with `{- -}`.</li>
+      <li><b>haddock</b>: Documentation comment starting with `-- ^` or `-- |`.</li>
+      <li><b>qq</b>: Quasi-quotation expression enclosed in `[...]|` syntax.</li>
+      <li><b>directive</b>: Preprocessor directives starting with `#`.</li>
+      </ul>
+
+
+     ]]></change-notes>
+
+
     <depends>com.intellij.modules.platform</depends>
-
-
 
     <actions>
         <action id="CreateHaskellFileAction"
@@ -18,8 +143,6 @@
                 icon="/icons/plugin-hs-Icon.svg">
             <add-to-group group-id="NewGroup" anchor="first"/>
         </action>
-
-
 
 
         <group id="Haskell.CardanoAPI"
