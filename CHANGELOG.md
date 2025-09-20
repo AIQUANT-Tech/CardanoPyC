@@ -13,7 +13,7 @@
 
 - **Formatting & Readability**: Improved markdown structure, headings, and code blocks in the readme for easier navigation.
 
-## [3.0.9] - 2025-08-15
+## [3.0.9] - 2025-09-11
 
 ### Diagnostic Feature
 
@@ -47,7 +47,7 @@
 
 - **Interactive Popup**: Displays UTXO and datum details in a scrollable dialog.
 
-## [3.0.6] - 2025-07-30
+## [3.0.6] - 2025-09-02
 
 ### Wallet Management
 
@@ -89,7 +89,7 @@
 
 - **Error Handling**: Detects missing files, invalid paths, and CLI errors.
 
-## [3.0.5] - 2025-06-20
+## [3.0.5] - 2025-08-27
 
 ### Cardano API Integration
 
