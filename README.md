@@ -14,7 +14,7 @@
 
 
 <!-- Plugin description -->
-CardanoPyC is a powerful IntelliJ-based plugin that provides seamless support for Haskell and Plutus development with deep integration to the Cardano blockchain. It enhances developer productivity by offering:
+**CardanoPyC** is a powerful IntelliJ-based plugin that provides seamless support for Haskell and Plutus development with deep integration to the Cardano blockchain. It enhances developer productivity by offering:
 
 - **Advanced Haskell Support**: Syntax highlighting, code completion, and file creation for Haskell files (.hs)
 - **Cardano Blockchain Integration**: Direct access to Cardano API data through the Run menu
