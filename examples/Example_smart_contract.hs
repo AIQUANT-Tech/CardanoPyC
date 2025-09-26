@@ -7,7 +7,7 @@
 {-# LANGUAGE DeriveAnyClass #-}
 {-# LANGUAGE DeriveGeneric #-}
 
-module Guess_Sum (writeHelloWorldScript) where
+module Example_smart_contract (writeHelloWorldScript) where
 
 import qualified Prelude
 import Prelude (FilePath, IO, Show (..), ($), (>>=))
