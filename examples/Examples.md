@@ -1,24 +1,33 @@
 # Examples
 
-This document showcases the **Diagnostic Feature**, **Debug Tools**, **Wallet Management**, **Smart Contract Deployment**, **Cardano API Integration**, **Syntax Highlighting**, and **Code Completion** along with video demonstrations.
+
+This document showcases examples on how to use 
+- **Diagnostic Feature**
+- **Debug Tools**
+- **Wallet Management**
+- **Smart Contract Deployment**
+- **Cardano API Integration**
+- **Syntax Highlighting**
+- **Code Completion** 
+
+along with video demonstrations.
 
 
-## 📺 Example Videos
+## 📺 Video Demonstrations
 
-🎥 **Diagnostic Feature & Debug Tools Demo**  
+- **Diagnostic Feature & Debug Tools example**  
 [Watch on YouTube](https://youtu.be/LfSuzCy3qWs?si=Rlcn_nZhMb23DErP)
 
----
-
-🎥 **Wallet Management & Smart Contract Deployment Demo**  
+- **Wallet Management & Smart Contract Deployment example**  
 [Watch on YouTube](https://youtu.be/Dq8NNB8RPOg?si=YXsrQc-g_D__ecy6)
 
----
 
-🎥 **Cardano API Integration, Code Completion & Syntax Highlighting Demo**  
+
+- **Cardano API Integration, Code Completion & Syntax Highlighting example**  
 [Watch on YouTube](https://www.youtube.com/watch?v=zGLwGJFA9Y4)
 
-## 🚑 Diagnostic Feature
+## Diagnostic Feature
+
 
 - **Error Highlighting**: Instantly highlights errors in Haskell files.
 - **Error Suggestions**: Provides actionable suggestions for quick fixes.
@@ -36,10 +45,10 @@ This document showcases the **Diagnostic Feature**, **Debug Tools**, **Wallet Ma
 #### Diagnostic error suggestion 📸
 ![Diagnostic Error Suggestion](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/diagnostic_error_suggestion.png?raw=true)
 
-🎞️ Diagnostics Demo (GIF):  
-![Diagnostic Feature Demo](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/diagnostic_feature.gif?raw=true)
+🎞️ Diagnostics feature example (GIF):  
+![Diagnostic Feature example](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/diagnostic_feature.gif?raw=true)
 
-## 🐞 Debug Tools
+## 🐞 Debuging
 
 - **Cabal Debug Runner**: Seamlessly run and debug Haskell projects using Cabal, with REPL integration.
 - **Integrated Debug Console**: Launches GHCi with clear status messages.
@@ -57,8 +66,9 @@ This document showcases the **Diagnostic Feature**, **Debug Tools**, **Wallet Ma
 ![Debug Error](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/debug_error.png?raw=true)
 
 
-🎞️ Debug Demo (GIF):  
-![Debug Tools Demo](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/Debug_tools.gif?raw=true)
+🎞️ Debug example (GIF):  
+![Debug Tools example](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/Debug_tools.gif?raw=true)
+
 
 ---
 
@@ -80,8 +90,10 @@ This document showcases the **Diagnostic Feature**, **Debug Tools**, **Wallet Ma
 #### Wallet Management 📸
 ![Wallet Management](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/wallet_management.png?raw=true)
 
-🎞️ Wallet Management Demo (GIF):  
-![Wallet Management Demo](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/wallet_management.gif?raw=true)
+
+🎞️ Wallet Management example (GIF):  
+![Wallet Management example](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/wallet_management.gif?raw=true)
+
 
 ## 📜 Deployment of Smart Contract
 
@@ -100,8 +112,10 @@ This document showcases the **Diagnostic Feature**, **Debug Tools**, **Wallet Ma
 ![Deployment](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/Deployment.png?raw=true)
 
 
-🎞️ Deployment Demo (GIF):  
-![Deployment of Smart Contract Demo](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/Deployment.gif?raw=true)
+
+🎞️ Deployment feature example (GIF):  
+![Deployment of Smart Contract example](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/Deployment.gif?raw=true)
+
 
 
 ---
@@ -156,5 +170,7 @@ This document showcases the **Diagnostic Feature**, **Debug Tools**, **Wallet Ma
 ![Code Completion](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/code_completion.png?raw=true)
 
 
-🎞️ Code Completion Demo (GIF):  
-![code Completion Demo](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/code_completion.gif?raw=true)
+
+🎞️ Code Completion example (GIF):  
+![code Completion example](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/code_completion.gif?raw=true)
+
