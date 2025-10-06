@@ -1,5 +1,6 @@
 # Examples
 
+
 This document showcases examples on how to use 
 - **Diagnostic Feature**
 - **Debug Tools**
@@ -26,6 +27,7 @@ along with video demonstrations.
 [Watch on YouTube](https://www.youtube.com/watch?v=zGLwGJFA9Y4)
 
 ## Diagnostic Feature
+
 
 - **Error Highlighting**: Instantly highlights errors in Haskell files.
 - **Error Suggestions**: Provides actionable suggestions for quick fixes.
@@ -67,6 +69,7 @@ along with video demonstrations.
 🎞️ Debug example (GIF):  
 ![Debug Tools example](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/Debug_tools.gif?raw=true)
 
+
 ---
 
 ## 👛 Wallet Management
@@ -87,8 +90,10 @@ along with video demonstrations.
 #### Wallet Management 📸
 ![Wallet Management](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/wallet_management.png?raw=true)
 
+
 🎞️ Wallet Management example (GIF):  
 ![Wallet Management example](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/wallet_management.gif?raw=true)
+
 
 ## 📜 Deployment of Smart Contract
 
@@ -107,8 +112,10 @@ along with video demonstrations.
 ![Deployment](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/Deployment.png?raw=true)
 
 
+
 🎞️ Deployment feature example (GIF):  
 ![Deployment of Smart Contract example](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/Deployment.gif?raw=true)
+
 
 
 ---
@@ -163,5 +170,7 @@ along with video demonstrations.
 ![Code Completion](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/code_completion.png?raw=true)
 
 
+
 🎞️ Code Completion example (GIF):  
 ![code Completion example](https://github.com/AIQUANT-Tech/CardanoPyC/blob/main/examples/code_completion.gif?raw=true)
+
